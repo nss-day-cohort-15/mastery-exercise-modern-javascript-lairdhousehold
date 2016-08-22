@@ -13,44 +13,44 @@
     <h1>Robot Warfield</h1>
 
     <div class="row" id="display-area">
-      <div class="col-md-5 player1">
-        <label for="player1">Give Your Robot a Name</label>
+      <div class="col-sm-5 player1">
+        <label for="player1">Player 1: Give Your Robot a Name</label>
         <input type="text" placeholder="Type Robot Name Here" class="form-control" id="player1Name">
         <select id="player1-select" class="form-control">
           <optgroup label="Tankbot">
-            <option>Howitzer</option>
-            <option>Vulconizer</option>
+            <option class="howitzer1">Howitzer</option>
+            <option class="vulconizer1">Vulconizer</option>
           </optgroup>
           <optgroup label="Voltron">
-            <option>Sword Daddy</option>
-            <option>Flying Lion</option>
+            <option class="sword1">Sword Daddy</option>
+            <option class="flying1">Flying Lion</option>
           </optgroup>
           <optgroup label="Aerial-Mech">
-            <option>The Gunner</option>
-            <option>Missile Madness</option>
+            <option class="gunner1">The Gunner</option>
+            <option class='missile1'>Missile Madness</option>
           </optgroup>
           <img src="">
         </select>
       </div>
-      <div class="col-md-5 player2">
-        <label for="player2">Give Your Robot a Name</label>
+      <div class="col-sm-5 player2">
+        <label for="player2">Player 2: Give Your Robot a Name</label>
         <input type="text" placeholder="Type Robot Name Here" class="form-control" id="player2Name">
         <select id="player2-select" class="form-control">
           <optgroup label="Tankbot">
-            <option>Howitzer</option>
-            <option>Vulconizer</option>
+            <option class="howitzer2">Howitzer</option>
+            <option class="vulconizer2">Vulconizer</option>
           </optgroup>
           <optgroup label="Voltron">
-            <option>Sword Daddy</option>
-            <option>Flying Lion</option>
+            <option class="sword2">Sword Daddy</option>
+            <option class="flying2">Flying Lion</option>
           </optgroup>
           <optgroup label="Aerial-Mech">
-            <option>The Gunner</option>
-            <option>Missile Madness</option>
+            <option class="gunner">The Gunner</option>
+            <option class="missile">Missile Madness</option>
           </optgroup>
           <img src="">
         </select>
-      </div>
+      </div class="battle">
       <button>Destroy Each Other</button>
 
     </div>
@@ -60,7 +60,9 @@
 
 
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+ <!--  <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
   <script src="aps.js"></script>
+  <script src="aps2.js"></script>
 
 </body>
 </html>
