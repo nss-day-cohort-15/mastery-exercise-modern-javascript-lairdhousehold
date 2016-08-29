@@ -1,5 +1,5 @@
 var robotWars = (function (robotWars){
-  $(document).ready(function({
+  $(document).ready(function(){
 
   $('.howitzer1').on('click', function(){
       player1 = new robotWars.howitzer();
@@ -50,5 +50,5 @@ var robotWars = (function (robotWars){
       player2.name = robotWars.name;
     })
   return robotWars
-  }))
+  })
 })(robotWars||{})
