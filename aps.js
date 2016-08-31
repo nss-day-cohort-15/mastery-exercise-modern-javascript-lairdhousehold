@@ -1,6 +1,6 @@
 var robotWars = (function (robotWars){
  $(document).ready(function(){
-  robotWars.robot = function(){
+   let rbt = {
     this.name ='';
     this.type = null;
     this.subtype = null;
