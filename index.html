@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Robot Warfield</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css"
+
+<body>
+  <article class="container">
+    <h1>Robot Warfield</h1>
+
+    <div class="row" id="display-area">
+      <div class="col-sm-5 player1">
+        <label for="player1">Player 1: Give Your Robot a Name</label>
+        <input type="text" placeholder="Type Robot Name Here" class="form-control" id="player1Name">
+        <select id="player1-select" class="form-control">
+          <optgroup label="Tankbot">
+            <option >Howitzer</option>
+            <option >Vulconizer</option>
+          </optgroup>
+          <optgroup label="Voltron">
+            <option >SwordBot</option>
+            <option >Flying Lion</option>
+          </optgroup>
+          <optgroup label="Aerial-Mech">
+            <option >GunnerBot</option>
+            <option >MissileBot</option>
+          </optgroup>
+          <img src="">
+        </select>
+      </div>
+      <div class="col-sm-5 player2">
+        <label for="player2">Player 2: Give Your Robot a Name</label>
+        <input type="text" placeholder="Type Robot Name Here" class="form-control" id="player2Name">
+        <select id="player2-select" class="form-control">
+          <optgroup label="Tankbot">
+            <option >Howitzer</option>
+            <option >Vulconizer</option>
+          </optgroup>
+          <optgroup label="Voltron">
+            <option >SwordBot</option>
+            <option >FlyingLion</option>
+          </optgroup>
+          <optgroup label="Aerial-Mech">
+            <option>GunnerBot</option>
+            <option>MissileBot</option>
+          </optgroup>
+          <img src="">
+        </select>
+      </div >
+      <button id="battle">Destroy Each Other</button>
+
+    </div>
+    <div class="battle">
+
+    </div>
+
+  </article>
+
+
+
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="quiz.js" ></script>
+  <script src="aps.js"></script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
+
