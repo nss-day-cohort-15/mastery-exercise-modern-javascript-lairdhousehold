@@ -1,85 +1,79 @@
-var robotWars = (function (robotWars){
- $(document).ready(function(){
-   let rbt = {
-    this.name ='';
-    this.type = null;
-    this.subtype = null;
-    this.health = 0;
-    this.damage = 0;
-    console.log(robotWars.robot)
-
-  };
-  function randomHealth(min, max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random()*(min-max))+ min;
-  console.log(robotWars)
+"use strict"
+class Robot {
+  constructor(name){
+    return this.name
+    // this.name ='';
   }
-  function randomAttack(min, max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random()*(min-max))+ min;
+  health(min, max){
+    this.health = Math.floor(Math.random()*(min-max))+ min;
   }
+  attack(min, max){
+    this.attack = this.health = Math.floor(Math.random()*(min-max))+ min;
+  }
+}
+  console.log()
 
-  robotWars.TankBot = function(){
-    this.type = 'Tankbot';
-    console.log(TankBot)
-  };
-    robotWars.Tankbot.prototype = new robotWars.robot();
-  robotWars.Voltron = function(){
-    this.type = 'Voltron';
-  };
-    robotWars.Voltron.prototype = new robotWars.robot();
-  robotWars.AerialMech = function(){
-    this.type = 'Aerial-Mech';
-  };
-    robotWars.AerialMech.prototype = new robotWars.robot();
-  robotWars.howitzer = function(){
-    this.subtype = 'howitzer'
-    this.health = randomHealth(50,120);
-    this.damage = randomAttack(25,100);
-    this.img = '<img class="pic"src="img/Howitzer.jpg" alt="tankbot"/>'
-  };
-  robotWars.howitzer.prototype = new robotWars.TankBot
+class TankBot extends Robot{}
+class Howitzer extends TankBot{
+  constructor(name){
+    super(name);
+    this.robotName = name0.
 
-  robotWars.vulconizer = function(){
-    this.subtype = 'vulconizer'
-    this.health = randomHealth(45,100);
-    this.damage = randomAttack(45,80);
-    this.img = '<img class="pic"src="img/machine gun.jpg" alt="tankbot"/>'
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "Howitzer";
+    this.img ='https://s-media-cache-ak0.pinimg.com/564x/49/ea/e4/49eae446786cd52a280b03582a673fa6.jpg'
   };
-  robotWars.vulconizer.prototype = new robotWars.TankBot()
 
-  robotWars.swordBot = function(){
-    this.subtype = 'swordBot'
-    this.health = randomHealth(25,100);
-    this.damage = randomAttack(60,75);
-    this.img = '<img class="pic"src="img/Sword Daddy.jpg" alt="tankbot"/>'
+}
+class Vulconizer extends TankBot{
+  constructor(name){
+    super(name);
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "Vulconizer";
+    this.img = 'https://s-media-cache-ak0.pinimg.com/564x/cf/d5/46/cfd546668b1da3956b253e0267167da4.jpg'
+  }
+}
+class Voltron extends Robot{}
+class SwordBot extends Voltron {
+  constructor(name){
+    super(name);
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "SwordBot";
+    this.img ='http://static.srcdn.com/slir/w1000-h500-q90-c1000:500/wp-content/uploads/Voltron-Destroys-the-Gladiator-with-Sword.jpg'
   };
-  robotWars.swordBot.prototype = new robotWars.Voltron()
 
-  robotWars.flyingLion = function(){
-    this.subtype = 'flyingLion'
-    this.health = randomHealth(50,95);
-    this.damage = randomAttack(40,90);
-    this.img = '<img class="pic"src="img/flying lion.jpg" alt="tankbot"/>'
+}
+class FlyingLion extends Voltron{
+  constructor(name){
+    super(name);
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "FlyingLion";
+    this.img ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQosYUV0M0GUSn8Ufzs8TNo8IBXCt0G2Z0vKKcNpBBaJQcAhUQb'
+  }
+}
+class  AerialMech extends Robot{}
+class GunnerBot extends AerialMech{
+  constructor(name){
+    super(name);
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "GunnerBot";
+    this.img ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQhqWpju6FoyuO_NzljSG85W2VEper6dVUd_Fqhn7YWcFxCP6n'
   };
-  robotWars.flyingLion.prototype = new robotWars.Voltron()
-  robotWars.gunnerBot = function(){
-    this.subtype = 'gunnerBot'
-    this.health = randomHealth(50,80);
-    this.damage = randomAttack(25,100);
-    this.img = '<img class="pic"src="img/air machine gun.jpg" alt="tankbot"/>'
-  };
-  robotWars.missleBot.prototype = new robotWars.AerialMech()
-  robotWars.missleBot = function(){
-    this.subtype = 'missleBot'
-    this.health = randomHealth(50,100);
-    this.damage = randomAttack(60,70);
-    this.img = '<img class="pic"src="img/air missile.jpg" alt="tankbot"/>'
-  };
-  robotWars.missileBot.prototype = new robotWars.AerialMech()
- });
-return robotWars
-})(robotWars||{});
+
+}
+class MissileBot extends AerialMech{
+  constructor(name){
+    super(name);
+    this.health = (50, 120);
+    this.attack = (25,100);
+    this.type = "MissileBot";
+    this.img ='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2nYn0p1WSsH6n'
+  }
+}
+
 
